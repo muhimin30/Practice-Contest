@@ -13,7 +13,19 @@ typedef vector<int> vi;
 
 void solve()
 {
-		
+	int n; cin >> n;
+	string s; cin >> s;
+
+	map<char, int> ans;
+	for(int i = 0; i < n; i++){
+		ans[s[i]]++;
+	}
+
+	int cnt = 0;
+	for(auto a: ans){
+		if(a.second >= (a.first- 'A') + 1) cnt++;
+	}
+	cout << cnt << endl;
 
 
 }
@@ -25,7 +37,7 @@ int main()
 
 	int t = 1;
 
-	//cin >> t;	
+	cin >> t;	
 
 	while(t--){
 		solve();

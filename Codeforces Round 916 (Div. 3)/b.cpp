@@ -13,8 +13,26 @@ typedef vector<int> vi;
 
 void solve()
 {
-		
+	int n, k; cin >> n >> k;
 
+	vector<int> ans;
+
+	int dif = 1;
+	if(k > 0){
+		ans.push_back(dif);
+		dif++;
+	}
+	for(int i = 1; i < k; i++){
+		ans.push_back(dif);
+		dif++;
+	}
+
+	for(int i = n; i > k ; i--){
+		ans.push_back(i);
+	}
+
+	for(auto a: ans) cout << a << ' ';
+	cout << endl;
 
 }
 
@@ -25,7 +43,7 @@ int main()
 
 	int t = 1;
 
-	//cin >> t;	
+	cin >> t;	
 
 	while(t--){
 		solve();
